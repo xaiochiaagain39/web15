@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        喜歡的甜點 :
+            <br>
+            <input type="radio" name="dessert" value="蛋糕">蛋糕
+            <input type="radio" name="dessert" value="布丁">布丁
+            <input type="radio" name="dessert" value="泡芙">泡芙
+            <input type="radio" name="dessert" value="甜甜圈">甜甜圈
+            <br>
+            <input type="submit" onclick="showResult()">
+            <input type="reset">
+        </form>
+    <script>
+        function showResult() {
+            var result = '';
+            var dessert = document.getElementsByName('dessert');
+            
+            for (var i = 0; i < dessert.length; i++) {
+                if (dessert[i].checked) {
+                    result = dessert[i].value;
+                    break;
+                }
+            }
+            window.alert(result);
+        }
+    </script>
+</body>
+</html>

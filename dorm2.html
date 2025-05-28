@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span>關於我</span>
+        <span onclick="changetoexps();">學經歷</span>
+    </div>
+    <br/>
+    <div id="about">大家好，我是馬廷嘉</div>
+    <div id="exps" style="display: none">我是南台科技大學資工系的五專學生</div>
+    <script>
+        function changetoexps(){
+            let aboutDiv=document.querySelector("#about");
+            let expsDiv=document.querySelector("#exps");
+
+            aboutDiv.style.display="none";
+            expsDiv.style.display="block";
+        }
+    </script>
+</body>
+</html>
